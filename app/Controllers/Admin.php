@@ -4,6 +4,8 @@ class Admin extends BaseController
 {
     public function index()
     {
-        return view('admin/index');
+        echo view('admin/header');
+        echo view('admin/index');
+        echo view('admin/footer');
     }
 }

@@ -8,8 +8,10 @@ class Dashboard extends Controller
     {
         $session = session();
         if($session->get('logged_in')){
-            return view('profile');
-            // return "Welcome back, ".$session->get('user_name');
+            echo view('header');
+            echo "<h1>Welcome back, ".$session->get('user_name')."</h1>";
+            // echo view('about/about');
+            echo view('footer');
         } else {
             return redirect()->to('/login');
         }

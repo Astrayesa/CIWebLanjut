@@ -12,7 +12,9 @@ class Login extends Controller
             return redirect()->to('/dashboard');
         }else{
             helper(['form']);
-            echo view('login');
+            echo view('login/header');
+            echo view('login/login');
+            echo view('login/footer');
         }
     }
  
